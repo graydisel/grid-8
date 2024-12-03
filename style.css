@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr repeat(4, 50px);
+  height: 100vh;
+}
+
+header, main, .feature {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header {
+  background-color: #489def;
+}
+
+main {
+  background-color: #7e7e7e;
+}
+
+.sign_up {
+  background-color: lightblue;
+}
+
+.sign_in {
+  background-color: #ddc05b;
+}
+
+.about {
+  background-color: lightcoral;
+}
+
+.social {
+  background-color: #a582cd;
+}
