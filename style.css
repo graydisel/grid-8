@@ -5,9 +5,9 @@
 
 body {
   display: grid;
+  height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 1fr repeat(4, 50px);
-  height: 100vh;
 }
 
 header, main, .feature {
@@ -39,4 +39,40 @@ main {
 
 .social {
   background-color: #a582cd;
+}
+
+@media (min-width: 800px) {
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  .sign_up {
+    grid-area: sign_up;
+  }
+
+  .sign_in {
+    grid-area: sign_in;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .social {
+    grid-area: social;
+  }
+
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr repeat(2, 100px);
+    grid-template-areas:
+      "header header"
+      "main main"
+      "sign_up sign_in"
+      "about social";
+  }
 }
