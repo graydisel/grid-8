@@ -15,30 +15,31 @@ header, main, .feature {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  border: 1px solid white;
 }
 
 header {
-  background-color: #489def;
+  background-color: #add0ff;
 }
 
 main {
-  background-color: #7e7e7e;
+  background-color: #c6c6c6;
 }
 
 .sign_up {
-  background-color: lightblue;
+  background-color: #c2f9fd;
 }
 
-.sign_in {
-  background-color: #ddc05b;
+.contact {
+  background-color: #ffe8a1;
 }
 
 .about {
-  background-color: lightcoral;
+  background-color: #ffa9a9;
 }
 
 .social {
-  background-color: #a582cd;
+  background-color: #ddc1ff;
 }
 
 @media (min-width: 800px) {
@@ -54,12 +55,12 @@ main {
     grid-area: sign_up;
   }
 
-  .sign_in {
-    grid-area: sign_in;
-  }
-
   .about {
     grid-area: about;
+  }
+
+  .contact {
+    grid-area: contact;
   }
 
   .social {
@@ -72,7 +73,19 @@ main {
     grid-template-areas:
       "header header"
       "main main"
-      "sign_up sign_in"
+      "sign_up contact"
       "about social";
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 200px 100px 1fr;
+    grid-template-areas:
+        "header header header"
+        "about contact social"
+        "sign_up sign_up sign_up"
+        "main main main";
   }
 }
